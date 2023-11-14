@@ -1,7 +1,0 @@
-@startuml
-
-class PingController {
-  + ping(): String
-}
-
-@enduml

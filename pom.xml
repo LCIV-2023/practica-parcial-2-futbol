@@ -10,10 +10,10 @@
         <relativePath/>
     </parent>
     <groupId>ar.edu.utn.frc.tup.lc.iv</groupId>
-    <artifactId>tpi-scaffolding</artifactId>
-    <version>0.0.1-SNAPSHOT</version> <!-- Change the artifact version every time you release a new version-->
-    <name>tpi-scaffolding</name> <!-- TODO: Change the project name -->
-    <description>TPI Initial Scaffolding</description> <!-- TODO: Change the project description -->
+    <artifactId>parcial-2-futbol</artifactId>
+    <version>0.0.1</version>
+    <name>parcial-2-futbol</name> <!-- TODO: Change the project name -->
+    <description>Parcial 2 Futbol</description> <!-- TODO: Change the project description -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
@@ -84,115 +84,11 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${checkstyle-maven-plugin.version}</version>
-                <configuration>
-                    <configLocation>.code_quality/checkstyle_rules.xml</configLocation>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${project.parent.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>${maven-pmd-plugin.version}</version>
-                <configuration>
-                    <linkXRef>false</linkXRef>
-                    <inputEncoding>utf-8</inputEncoding>
-                    <minimumTokens>100</minimumTokens>
-                    <rulesets>
-                        <ruleset>.code_quality/pmd_rules.xml</ruleset>
-                    </rulesets>
-                    <printFailingErrors>true</printFailingErrors>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.0</version>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                    <reportOutputDirectory>./docs/java_doc</reportOutputDirectory>
-                </configuration>
             </plugin>
         </plugins>
     </build>
 
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${checkstyle-maven-plugin.version}</version>
-                <configuration>
-                    <configLocation>.code_quality/checkstyle_rules.xml</configLocation>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>${maven-pmd-plugin.version}</version>
-                <configuration>
-                    <inputEncoding>utf-8</inputEncoding>
-                    <linkXRef>false</linkXRef>
-                    <inputEncoding>utf-8</inputEncoding>
-                    <minimumTokens>100</minimumTokens>
-                    <rulesets>
-                        <ruleset>.code_quality/pmd_rules.xml</ruleset>
-                    </rulesets>
-                    <excludes>
-                        <exclude>**/Application.java</exclude>
-                    </excludes>
-                    <excludeRoots>
-                        <excludeRoot>target/generated-sources/stubs</excludeRoot>
-                    </excludeRoots>
-                </configuration>
-
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>pmd</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.0</version>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                    <reportOutputDirectory>./docs/java_doc</reportOutputDirectory>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
 
 </project>
